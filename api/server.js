@@ -19,6 +19,6 @@ app.post('/api/user', (req, res) => {
   res.json("user addedd");
 });
 
-app.listen(port, () => {
-    console.log(`Server listening on the port::${port}`);
+app.listen(3080, '0.0.0.0', () => {
+    console.log(`Server listening on http://0.0.0.0:3080`);
 });

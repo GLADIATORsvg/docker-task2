@@ -1,0 +1,12 @@
+FROM node:16-alpine
+
+WORKDIR /usr/src/app/api
+
+COPY package*.json ./
+RUN npm ci --production
+
+COPY . .
+
+EXPOSE 3080
+
+CMD ["npm", "run", "start"]
